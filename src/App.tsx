@@ -1,20 +1,17 @@
 import React, {Component} from "react";
 import { View, Text, StyleSheet } from "react-native/types";
-import Simples from "./componentes/Simples";
-import Padrao from "./estilos/Padrao";
-import Frag from "./componentes/Frag";
-import Parimpar from "./componentes/Parimpar";
-import Familia from "./componentes/relacao/Familia";
-import Membro from "./componentes/relacao/Membro";
+import UsuarioLogado from "./componentes/UsuarioLogado";
 
 
 export default class App extends Component{
   render() {
     return (
       <View style={estilos.container}>
-        <Familia>
-          <Membro nome="Joao" sobrenome="Reis"/>
-        </Familia>
+        <UsuarioLogado usuario={{nome:'teste', email:'teste@testemail.com'}}/>
+        <UsuarioLogado usuario={{nome:'teste 2'}}/>
+        <UsuarioLogado usuario={{email:'teste@testemail.com'}}/>
+        <UsuarioLogado usuario={null}/>
+        <UsuarioLogado usuario={{}}/>
       </View>
     );      
   }
