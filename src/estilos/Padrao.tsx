@@ -22,5 +22,12 @@ export default StyleSheet.create({
         color: '#000000',
         backgroundColor: '#ff0000',
     },
+    input: {
+        height: 40,
+        width: 180,
+        margin: 15,
+        borderWidth: 1,
+        borderRadius: 5,
+    }
 })
 
