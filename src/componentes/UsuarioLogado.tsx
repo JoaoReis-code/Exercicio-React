@@ -1,22 +1,21 @@
 import React from "react";
 import { Text } from "react-native";
-import Padrao from "../estilos/Padrao";
-import If from "./if";
+import Padrao from "../estilo/Padrao";
+import If from "./If";
 
 export default (props: any) => {
     const usuario = props.usuario || {}
-
+    
     return (
         <>
-        <If valido={usuario && usuario.nome && usuario.email}>
-            <Text style={Padrao.txt6}>
-                Usuario Logado
-            </Text>
-            <Text style={Padrao.txt6}>
-                {usuario.nome} - {usuario.email}
-            </Text>
-        </If> 
+            <If valido={usuario && usuario.nome && usuario.email}>
+                <Text style={Padrao.txtG}>
+                    Usuário Logado
+                </Text>
+                <Text style={Padrao.txtG}>
+                    {usuario.nome} - {usuario.email}
+                </Text>
+            </If>            
         </>
     )
-
 }

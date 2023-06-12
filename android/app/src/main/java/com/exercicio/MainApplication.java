@@ -1,4 +1,4 @@
-package com.ex;
+package com.exercicio;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

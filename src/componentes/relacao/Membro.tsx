@@ -1,10 +1,8 @@
-import React, { Children } from "react";
-import { Text } from "react-native/types";
-import Padrao from "../../estilos/Padrao";
+import React from "react";
+import { Text } from "react-native";
+import Padrao from "../../estilo/Padrao";
 
-export default (props: any) => (
-    <>
-        <Text>{props.nome}</Text>
-        <Text>{props.sobrenome}</Text> 
-    </>
-)
+export default (props: any) => 
+    <Text style={Padrao.txtG}>
+           {props.nome} {props.sobreNome}
+    </Text> 

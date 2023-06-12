@@ -1,18 +1,20 @@
-import React, { useState} from 'react';
-import { View, TextInput } from 'react-native';
-import Padrao from "../estilos/Padrao";
+import React, { useState } from 'react';
+import { Text, TextInput } from 'react-native';
+import Padrao from '../estilo/Padrao';
 
-export default (props:any) =>{
 
-    let [texto, setNome] =  useState('')
+export default (props: any) => {
+
+    let [nome, setNome] = useState('Teste')
 
     return (
         <>
-            <TextInput
+            <Text>{nome}</Text>
+            <TextInput 
                 style={Padrao.input}
-                placeholder={props.placeholder}
-                value={texto}
-                onChangeText={texto => setNome(texto)}
+                placeholder='Digite Seu Nome'
+                value={nome}
+                onChangeText={nome => setNome(nome)}
             />
         </>
     )
